@@ -1,4 +1,4 @@
-import { Mail, Phone, Facebook } from "lucide-react";
+import { Mail, Phone, Facebook, Instagram } from "lucide-react";
 
 const SiteFooter = () => {
   return (
@@ -38,6 +38,14 @@ const SiteFooter = () => {
                 className="text-background/70 hover:text-primary transition-colors"
               >
                 <Facebook className="w-5 h-5" />
+              </a>
+              <a
+                href="https://www.instagram.com/cabestany_avant_tout/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-background/70 hover:text-primary transition-colors"
+              >
+                <Instagram className="w-5 h-5" />
               </a>
             </div>
           </div>

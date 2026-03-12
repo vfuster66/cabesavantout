@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Mail, Phone, Facebook } from "lucide-react";
+import { Mail, Phone, Facebook, Instagram } from "lucide-react";
 
 const ContactSection = () => {
   return (
@@ -24,14 +24,14 @@ const ContactSection = () => {
           </p>
         </motion.div>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 md:gap-10">
+        <div className="flex flex-col sm:flex-row flex-wrap items-stretch justify-center gap-6 md:gap-8">
           <motion.a
             href="mailto:cabesavantout@yahoo.com"
             initial={{ opacity: 0, y: 8 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.3 }}
-            className="flex items-center gap-3 bg-card rounded-2xl p-5 shadow-[var(--card-shadow)] hover:shadow-[var(--card-shadow-hover)] transition-shadow duration-200"
+            className="flex-1 min-w-[240px] flex items-center gap-3 bg-card rounded-2xl p-5 shadow-[var(--card-shadow)] hover:shadow-[var(--card-shadow-hover)] transition-shadow duration-200"
           >
             <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
               <Mail className="w-6 h-6 text-primary" />
@@ -52,7 +52,7 @@ const ContactSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.3, delay: 0.05 }}
-            className="flex items-center gap-3 bg-card rounded-2xl p-5 shadow-[var(--card-shadow)] hover:shadow-[var(--card-shadow-hover)] transition-shadow duration-200"
+            className="flex-1 min-w-[240px] flex items-center gap-3 bg-card rounded-2xl p-5 shadow-[var(--card-shadow)] hover:shadow-[var(--card-shadow-hover)] transition-shadow duration-200"
           >
             <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
               <Phone className="w-6 h-6 text-primary" />
@@ -75,7 +75,7 @@ const ContactSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.3, delay: 0.1 }}
-            className="flex items-center gap-3 bg-card rounded-2xl p-5 shadow-[var(--card-shadow)] hover:shadow-[var(--card-shadow-hover)] transition-shadow duration-200"
+            className="flex-1 min-w-[240px] flex items-center gap-3 bg-card rounded-2xl p-5 shadow-[var(--card-shadow)] hover:shadow-[var(--card-shadow-hover)] transition-shadow duration-200"
           >
             <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
               <Facebook className="w-6 h-6 text-primary" />
@@ -86,6 +86,29 @@ const ContactSection = () => {
               </span>
               <span className="text-sm text-muted-foreground">
                 Cabestany Avant Tout
+              </span>
+            </div>
+          </motion.a>
+
+          <motion.a
+            href="https://www.instagram.com/cabestany_avant_tout/"
+            target="_blank"
+            rel="noopener noreferrer"
+            initial={{ opacity: 0, y: 8 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.3, delay: 0.15 }}
+            className="flex-1 min-w-[240px] flex items-center gap-3 bg-card rounded-2xl p-5 shadow-[var(--card-shadow)] hover:shadow-[var(--card-shadow-hover)] transition-shadow duration-200"
+          >
+            <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+              <Instagram className="w-6 h-6 text-primary" />
+            </div>
+            <div>
+              <span className="block text-sm font-semibold text-foreground">
+                Instagram
+              </span>
+              <span className="text-sm text-muted-foreground">
+                @cabestany_avant_tout
               </span>
             </div>
           </motion.a>
