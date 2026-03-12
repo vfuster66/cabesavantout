@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import ThemeToggle from "./ThemeToggle";
 
 const navLinks = [
   { label: "Programme", href: "#programme" },
@@ -20,7 +21,7 @@ const SiteHeader = () => {
 
   return (
     <header className="sticky top-0 z-50 bg-card/95 backdrop-blur-sm border-b border-border">
-      <div className="container-main flex items-center justify-between h-16 md:h-20">
+      <div className="container-main flex items-center justify-between h-16 md:h-20 gap-4">
         <a
           href="#"
           className="font-serif font-bold text-lg md:text-xl text-primary tracking-tight"
@@ -29,7 +30,7 @@ const SiteHeader = () => {
         </a>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
             <button
               key={link.href}
@@ -41,14 +42,20 @@ const SiteHeader = () => {
           ))}
         </nav>
 
-        {/* Mobile toggle */}
-        <button
-          className="md:hidden text-foreground"
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Menu"
-        >
-          {menuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div className="flex items-center gap-3">
+          <div className="hidden md:block">
+            <ThemeToggle />
+          </div>
+
+          {/* Mobile toggle */}
+          <button
+            className="md:hidden text-foreground"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Menu"
+          >
+            {menuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile menu */}
